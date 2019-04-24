@@ -32,3 +32,8 @@
 <button (click)="retorno = buscarId(parametroid.value)"> Buscar id</button>
 <p *ngIf= "retorno != undefined">{{retorno.id}} - {{retorno.nome}}</p>
 <hr>
+<p>Exemplo 8 Aplicando o Map</p>
+<br>
+<input #percentual placeholder="digite o percentual"/>
+<button (click)="aumentarSalario(percentual.value)"> Aumentar salario</button>
+<b><p> Salario Total Aumentado: {{getValorTotal()}}</p></b>
