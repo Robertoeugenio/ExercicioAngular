@@ -27,3 +27,8 @@
 <p>Exemplo 6 valores com reduce</p>
 <p> Salario total: {{getValorTotal()}}</p>
 <hr>
+<p>Exemplo 7 buscando um elemento com find</p>
+<input #parametroid placeholder="digite um id"/>
+<button (click)="retorno = buscarId(parametroid.value)"> Buscar id</button>
+<p *ngIf= "retorno != undefined">{{retorno.id}} - {{retorno.nome}}</p>
+<hr>
