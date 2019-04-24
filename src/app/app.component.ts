@@ -13,7 +13,7 @@ export class AppComponent {
     alert(valor)
   }*/
 
-  buscar(valor: string) {
+ /* buscar(valor: string) {*/
     /* this.nomesFiltro = [];*/
     //metodo 1 
     /*for (var i = 0; i < this.nomes.length; i++) {
@@ -32,8 +32,21 @@ export class AppComponent {
      this.nomesFiltro = temp;
    }*/
     /*metodo 3*/
-    this.nomesFiltro = this.nomes.filter(function (nome) {
+    /*this.nomesFiltro = this.nomes.filter(function (nome) {
       return nome.toLocaleLowerCase().includes(valor.toLocaleLowerCase());
-    });
+    });*/
+    pessoas: any  = [
+      {id: 1, nome: 'joão', salario: 5000},
+      {id: 1, nome: 'maria', salario: 1000},
+      {id: 1, nome: 'josé', salario: 2000},
+      {id: 1, nome: 'pedro', salario: 3000},
+      {id: 1, nome: 'felipe', salario: 10000},
+      {id: 1, nome: 'carlos', salario: 800},
+    ]
+    getValorTotal(): Number {
+      return this.pessoas.reduce(
+        (soma, pessoa) => soma+ pessoa.salario,0);
+    }
+    
   }
-}
+
